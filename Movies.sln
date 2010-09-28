@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{943AFA59-DC4A-4A06-ACEB-1F0E8455AB2E}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Movies.vsmdi = Movies.vsmdi
+		Movies1.vsmdi = Movies1.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Core", "Movies.Core\Movies.Core.csproj", "{D8A06219-3833-4217-8772-C448B9B165C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Client", "Movies.Client\Movies.Client.csproj", "{252C5240-B690-47B4-AE15-2E5205FE32A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Core.Tests", "Movies.Core.Tests\Movies.Core.Tests.csproj", "{B759F9B5-FE20-40C7-BAD4-F6ABA0E5A9C5}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Movies1.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8A06219-3833-4217-8772-C448B9B165C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A06219-3833-4217-8772-C448B9B165C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A06219-3833-4217-8772-C448B9B165C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A06219-3833-4217-8772-C448B9B165C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252C5240-B690-47B4-AE15-2E5205FE32A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252C5240-B690-47B4-AE15-2E5205FE32A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252C5240-B690-47B4-AE15-2E5205FE32A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252C5240-B690-47B4-AE15-2E5205FE32A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B759F9B5-FE20-40C7-BAD4-F6ABA0E5A9C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B759F9B5-FE20-40C7-BAD4-F6ABA0E5A9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B759F9B5-FE20-40C7-BAD4-F6ABA0E5A9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B759F9B5-FE20-40C7-BAD4-F6ABA0E5A9C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

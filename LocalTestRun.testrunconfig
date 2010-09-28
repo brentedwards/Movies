@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRunConfiguration name="Local Test Run" id="fd6b59bf-f915-48b7-8e7a-a9b6c94cbe51" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Description>This is a default test run configuration for a local test run.</Description>
+  <CodeCoverage enabled="true">
+    <Regular>
+      <CodeCoverageItem binaryFile="Movies.Core\bin\Debug\Movies.Core.dll" pdbFile="Movies.Core\bin\Debug\Movies.Core.pdb" instrumentInPlace="true" />
+      <CodeCoverageItem binaryFile="Movies.Core.Tests\bin\Debug\Movies.Core.Tests.dll" pdbFile="Movies.Core.Tests\bin\Debug\Movies.Core.Tests.pdb" instrumentInPlace="true" />
+    </Regular>
+  </CodeCoverage>
+  <TestTypeSpecific />
+</TestRunConfiguration>
