@@ -23,8 +23,8 @@ namespace Movies.Core.Navigation
 
 		private void HandleShowView(ShowViewMessage args)
 		{
-			var viewBuilder = ComponentContainer.Container.Resolve<IViewFactory>();
-			var viewResult = viewBuilder.Build(args.ViewTarget, args.LoadArgs);
+			var viewFactory = ComponentContainer.Container.Resolve<IViewFactory>();
+			var viewResult = viewFactory.Build(args.ViewTarget, args.LoadArgs);
 
 			var exists = false;
 			foreach (TabItem tabItem in _MainTabControl.Items)

@@ -73,9 +73,9 @@ namespace Movies.Core.Tests.Navigation
 
 			CreateContainer();
 
-			var viewBuilder = new ViewFactory();
+			var viewFactory = new ViewFactory();
 
-			viewBuilder.Build(ViewTargets.Detail, new Object());
+			viewFactory.Build(ViewTargets.Detail, new Object());
 		}
 
 		[TestMethod(), ExpectedException(typeof(NullReferenceException))]
@@ -94,9 +94,9 @@ namespace Movies.Core.Tests.Navigation
 					.Parameters(
 						Parameter.ForKey("View").Eq("${DetailView}")));
 
-			var viewBuilder = new ViewFactory();
+			var viewFactory = new ViewFactory();
 
-			viewBuilder.Build(ViewTargets.Detail);
+			viewFactory.Build(ViewTargets.Detail);
 		}
 
 		[TestMethod(), ExpectedException(typeof(ArgumentException))]
@@ -107,9 +107,9 @@ namespace Movies.Core.Tests.Navigation
 
 			CreateContainer();
 
-			var viewBuilder = new ViewFactory();
+			var viewFactory = new ViewFactory();
 
-			viewBuilder.Build(ViewTargets.Detail, Guid.NewGuid().ToString());
+			viewFactory.Build(ViewTargets.Detail, Guid.NewGuid().ToString());
 		}
 
 		[TestMethod(), ExpectedException(typeof(ArgumentException))]
@@ -120,9 +120,9 @@ namespace Movies.Core.Tests.Navigation
 
 			CreateContainer();
 
-			var viewBuilder = new ViewFactory();
+			var viewFactory = new ViewFactory();
 
-			viewBuilder.Build(ViewTargets.Detail);
+			viewFactory.Build(ViewTargets.Detail);
 		}
 
 		[TestMethod()]
@@ -137,9 +137,9 @@ namespace Movies.Core.Tests.Navigation
 
 			CreateContainer();
 
-			var viewBuilder = new ViewFactory();
+			var viewFactory = new ViewFactory();
 
-			var viewResult = viewBuilder.Build(ViewTargets.Detail);
+			var viewResult = viewFactory.Build(ViewTargets.Detail);
 
 			Assert.IsNotNull(viewResult);
 
@@ -159,9 +159,9 @@ namespace Movies.Core.Tests.Navigation
 
 			CreateContainer();
 
-			var viewBuilder = new ViewFactory();
+			var viewFactory = new ViewFactory();
 
-			var viewResult = viewBuilder.Build(ViewTargets.Detail);
+			var viewResult = viewFactory.Build(ViewTargets.Detail);
 
 			Assert.IsNotNull(viewResult);
 
@@ -183,10 +183,10 @@ namespace Movies.Core.Tests.Navigation
 
 			CreateContainer();
 
-			var viewBuilder = new ViewFactory();
+			var viewFactory = new ViewFactory();
 
 			var param = Guid.NewGuid().ToString();
-			var viewResult = viewBuilder.Build(ViewTargets.Detail, param);
+			var viewResult = viewFactory.Build(ViewTargets.Detail, param);
 
 			Assert.IsNotNull(viewResult);
 
@@ -207,9 +207,9 @@ namespace Movies.Core.Tests.Navigation
 
 			CreateContainer();
 
-			var viewBuilder = new ViewFactory();
+			var viewFactory = new ViewFactory();
 
-			var viewResult = viewBuilder.Build(ViewTargets.Detail);
+			var viewResult = viewFactory.Build(ViewTargets.Detail);
 
 			Assert.IsNotNull(viewResult);
 
