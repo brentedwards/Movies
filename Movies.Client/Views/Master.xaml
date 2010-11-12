@@ -10,64 +10,6 @@
 		<vm:MasterViewModel />
 	</UserControl.DataContext>
 	<UserControl.Resources>
-		<Style x:Key="MovieStyle" TargetType="Button">
-			<Style.Triggers>
-				<DataTrigger Binding="{Binding Rating}">
-					<DataTrigger.Value>
-						<mod:Ratings>R</mod:Ratings>
-					</DataTrigger.Value>
-					<Setter Property="Background" Value="Red" />
-					<Setter Property="Foreground" Value="White" />
-				</DataTrigger>
-				<DataTrigger Binding="{Binding Rating}">
-					<DataTrigger.Value>
-						<mod:Ratings>G</mod:Ratings>
-					</DataTrigger.Value>
-					<Setter Property="Background" Value="Green" />
-					<Setter Property="Foreground" Value="White" />
-				</DataTrigger>
-			</Style.Triggers>
-		</Style>
-		<DataTemplate x:Key="GTemplate">
-			<Image>
-				<Image.Source>
-					<BitmapImage
-						DecodePixelHeight="50"
-						UriSource="pack://application:,,,/Movies.Client;component/Images/g.png" />
-				</Image.Source>
-			</Image>
-		</DataTemplate>
-		<DataTemplate x:Key="RTemplate">
-			<Image>
-				<Image.Source>
-					<BitmapImage
-						DecodePixelHeight="50"
-						UriSource="pack://application:,,,/Movies.Client;component/Images/r.png" />
-				</Image.Source>
-			</Image>
-		</DataTemplate>
-		<conv:RatingTemplateSelector
-			x:Key="RatingSelector"
-			GTemplate="{StaticResource GTemplate}"
-			RTemplate="{StaticResource RTemplate}" />
-		<DataTemplate DataType="{x:Type mod:Movie}">
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto" />
-					<ColumnDefinition Width="*" />
-				</Grid.ColumnDefinitions>
-				<ContentControl
-					Content="{Binding Rating}"
-					ContentTemplateSelector="{StaticResource RatingSelector}" />
-				<Button
-					Content="{Binding Name}"
-					Command="{Binding Path=DataContext.MovieCommand, ElementName=Root}"
-					CommandParameter="{Binding}"
-					Grid.Column="1"
-					Margin="0,2"
-					Style="{StaticResource MovieStyle}" />
-			</Grid>
-		</DataTemplate>
 	</UserControl.Resources>
 	<Grid>
 		<Grid.ColumnDefinitions>
@@ -82,7 +24,6 @@
 		</ListView>
 		<Button
 			Content="New Movie"
-			Command="{Binding NewMovieCommand}"
 			Grid.Column="1"
 			Grid.Row="1"
 			Margin="0,5,0,0"/>

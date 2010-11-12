@@ -84,9 +84,6 @@ namespace Movies.Core.ViewModels
 		public void Save()
 		{
 			MovieRepository.Save(Movie);
-
-			var message = String.Format("'{0}' was saved.", Movie.Name);
-			Dialog.ShowMessage(message, "Movie Saved", MessageBoxButton.OK);
 		}
 
 		public void Close()

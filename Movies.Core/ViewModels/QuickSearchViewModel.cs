@@ -11,12 +11,7 @@ namespace Movies.Core.ViewModels
 		public QuickSearchViewModel()
 			: base()
 		{
-			SearchCommand = new DelegateCommand<Object>(obj => Search());
 		}
-
-		public ICommand SearchCommand { get; private set; }
-
-		public IMessageBus MessageBus { get; set; }
 
 		private String _Keywords;
 		public String Keywords
@@ -27,13 +22,6 @@ namespace Movies.Core.ViewModels
 				_Keywords = value;
 				NotifyPropertyChanged("Keywords");
 			}
-		}
-
-		public void Search()
-		{
-			var search = new SearchMessage(_Keywords);
-
-			MessageBus.Publish<SearchMessage>(search);
 		}
 	}
 }

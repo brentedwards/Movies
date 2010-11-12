@@ -9,6 +9,9 @@
 			<TabItem Header="Master">
 				<loc:Master />
 			</TabItem>
+			<TabItem Header="SampleDetail">
+				<loc:Detail />
+			</TabItem>
 		</TabControl>
 	</DockPanel>
 </Window>
